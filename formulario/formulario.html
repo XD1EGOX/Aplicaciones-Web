@@ -10,5 +10,48 @@
         <h1>Clases de APW 2do curso - SMR</h1>
         <h2>Formulario</h2>
         
+            <form action="mipagina.php" method="post">
+            Escribe tu nombre y Apellidos
+            <br>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <br>
+                <br>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellidos">
+            <br>
+            <br>
+            Contraseña
+            <br>
+                <input type="password" name="contraseña" id="contraseña">
+            
+            <p>Selecciona la edad</p>
+                <select name="edad" size="1">
+                    <option value="1">0-17</option>
+                    <option value="2">18-24</option>
+                    <option value="3">25-30</option>
+                    <option value="4">+30</option>
+                </select>
+                <br>
+                <br>
+            
+            <p>Sexo</p>
+                <input type="radio" name="sexo" id="sexo"> Hombre
+                <br>
+                <input type="radio" name="sexo" id="mujer"> Mujer
+                <br>
+                <input type="radio" name="sexo" id="otros"> Otros
+            <br>
+            <br>
+
+            <p>Idiomas</p>
+                <label><input type="checkbox" name="idiomas" value="es"> Español</label>
+                <label><input type="checkbox" name="idiomas" value="en"> Inglés</label>
+                <label><input type="checkbox" name="idiomas" value="fr"> Francés</label>
+
+            <br>
+            <br>
+
+            <button type="submit">Enviar</button>    
+        </form>
+
     </body>
 </html>
