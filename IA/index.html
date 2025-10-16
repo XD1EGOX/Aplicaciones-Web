@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Diego Petkov">
+  <meta name="description" content="Clases de APW 2do curso - SMR">
+  <title>Aprendiendo HTML5</title>
+</head>
+<body>
+  <header>
+    <h1>Ejercicios con IA (Introducción a HTML)</h1>
+  <!-- 1. GENERADOR DE CONTENIDOS CON IA-->
+  <section>
+    <h2>1. Generador de contenidos con IA</h2>
+
+    <h3>1.1 Presentación (estilo formal)</h3>
+    <p>Bienvenidas y bienvenidos a esta página dedicada a los gatos. Su historia, conducta y convivencia con las personas nos brindan un marco ideal para explorar cómo la Inteligencia Artificial puede ayudar a generar, validar y adaptar contenidos web. A lo largo de este sitio, analizaremos información, crearemos formularios y practicaremos buenas prácticas semánticas en HTML.</p>
+    <blockquote>“La IA es una herramienta: el criterio y la autoría siguen siendo humanos.”</blockquote>
+
+    <h3>1.2 Presentación (estilo divertido)</h3>
+    <p>¡Miau-dición oficial! Aquí aprenderás HTML con ayuda de la IA, mientras descubrimos curiosidades gatunas. Prometemos cero arañazos, muchos maullidos y un puñado de ejemplos que te harán ronronear de satisfacción.</p>
+    <blockquote>“Si un gato pisa el teclado, es <em>pair programming</em> felino.”</blockquote>
+
+    <h3>1.3 Imagen libre de derechos sugerida por la IA</h3>
+    <figure>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
+        alt="Gato doméstico de pelo corto mirando a la cámara"
+        width="640"
+      />
+    </figure>
+  </section>
+
+  <hr />
+
+  <!-- 2.VALIDACIÓN DE CÓDIGO CON IA-->
+  <section>
+    <h2>2. Validación de código con IA</h2>
+
+    <h3>2.1 HTML con errores (para análisis)</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Página con errores&lt;/title&gt;
+  &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Título principal
+  &lt;p&gt;Este párrafo no se cierra correctamente
+  &lt;img src="gato.jpg"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Elemento 1
+    &lt;li&gt;Elemento 2&lt;/p&gt;
+  &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h3>2.2 HTML corregido (sugerido por la IA)</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Página corregida&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Título principal&lt;/h1&gt;
+  &lt;p&gt;Este párrafo ahora está correctamente cerrado.&lt;/p&gt;
+  &lt;img src="gato.jpg" alt="Gato de perfil" /&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p>Después de aplicar las correcciones, valida el resultado final en el <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validator</a>.</p>
+  </section>
+
+  <hr />
+
+  <!-- 3.FORMULARIOS INTELIGENTES -->
+  <section>
+    <h2>3. Formularios inteligentes</h2>
+
+    <h3>3.1 Campos sugeridos por la IA</h3>
+    <ul>
+      <li>Nombre completo (obligatorio)</li>
+      <li>Correo electrónico (obligatorio)</li>
+      <li>Contraseña (obligatorio, con requisitos mínimos)</li>
+      <li>Teléfono (opcional, con validación básica)</li>
+      <li>País / Región (selección)</li>
+      <li>Fecha de nacimiento (opcional)</li>
+      <li>Aceptación de términos (obligatorio)</li>
+    </ul>
+
+    <h3>3.2 Formulario de registro (HTML puro con <code>pattern</code>)</h3>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Registro</legend>
+
+        <label for="nombre">Nombre completo</label><br />
+        <input id="nombre" name="nombre" type="text" required
+               pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:\s+[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+){1,}$"
+               title="Escribe al menos nombre y apellido usando solo letras y espacios." />
+        <p>Ejemplo de regex (IA): <code>^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:\s+[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+){1,}$</code></p>
+
+        <label for="email">Correo electrónico</label><br />
+        <input id="email" name="email" type="email" required
+               pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+               title="Formato de correo válido (usuario@dominio.tld)." />
+        <p>Ejemplo de regex (IA): <code>^[^\s@]+@[^\s@]+\.[^\s@]{2,}$</code></p>
+
+        <label for="password">Contraseña</label><br />
+        <input id="password" name="password" type="password" required
+               pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
+               title="Mínimo 8 caracteres, con mayúscula, minúscula y número." />
+        <p>Ejemplo de regex (IA): <code>^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$</code></p>
+
+        <label for="tel">Teléfono (opcional)</label><br />
+        <input id="tel" name="tel" type="tel"
+               pattern="^\+?\d{7,15}$"
+               title="Solo dígitos (7–15). Opcionalmente con prefijo +." />
+        <p>Ejemplo de regex (IA): <code>^\+?\d{7,15}$</code></p>
+
+        <label for="pais">País / Región</label><br />
+        <select id="pais" name="pais" required>
+          <option value="">Selecciona…</option>
+          <option value="es">España</option>
+          <option value="mx">México</option>
+          <option value="ar">Argentina</option>
+          <option value="co">Colombia</option>
+          <option value="cl">Chile</option>
+          <option value="pe">Perú</option>
+          <option value="ot">Otro</option>
+        </select>
+
+        <br /><br />
+        <label for="nacimiento">Fecha de nacimiento (opcional)</label><br />
+        <input id="nacimiento" name="nacimiento" type="date" />
+
+        <br /><br />
+        <label>
+          <input id="terminos" name="terminos" type="checkbox" required />
+          Acepto los términos y condiciones
+        </label>
+
+        <br /><br />
+        <button type="submit">Crear cuenta</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <hr />
+
+  <!-- 4.PÁGINA DE CURIOSIDADES-->
+  <section>
+    <h2>4. Página de curiosidades</h2>
+
+    <h3>4.1 Diez curiosidades sobre los gatos</h3>
+    <ul>
+      <li>Los gatos pueden hacer más de 100 tipos de vocalizaciones.</li>
+      <li>Duermen entre 12 y 16 horas al día.</li>
+      <li>Su ronroneo puede tener efectos calmantes en humanos.</li>
+      <li>Tienen excelente visión nocturna.</li>
+      <li>Su olfato es mucho más sensible que el humano.</li>
+      <li>Poseen bigotes que les ayudan a medir espacios.</li>
+      <li>Marcan territorio con glándulas en mejillas y patas.</li>
+      <li>La “posición del pan” indica relajación y confort.</li>
+      <li>El juego de caza desarrolla coordinación y reflejos.</li>
+      <li>Se comunican también con la cola y las orejas.</li>
+    </ul>
+
+    <h3>4.2 Lectura recomendada (orden sugerido)</h3>
+    <ol>
+      <li><a href="https://es.wikipedia.org/wiki/Felis_silvestris_catus" target="_blank" rel="noopener">Wikipedia: Gato doméstico</a></li>
+      <li><a href="https://kids.nationalgeographic.com/animals/mammals/facts/domestic-cat" target="_blank" rel="noopener">National Geographic Kids: Domestic Cat</a></li>
+      <li><a href="https://www.aspca.org/pet-care/cat-care" target="_blank" rel="noopener">ASPCA: Cat Care</a></li>
+    </ol>
+
+    <h3>4.3 Tabla de datos (ejemplo)</h3>
+    <table border="1">
+      <caption>Comparativa rápida</caption>
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>Promedio en gatos</th>
+          <th>Observaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Horas de sueño</td>
+          <td>12–16 h/día</td>
+          <td>Mayor actividad al amanecer y atardecer</td>
+        </tr>
+        <tr>
+          <td>Esperanza de vida</td>
+          <td>12–18 años</td>
+          <td>Depende de cuidados y ambiente</td>
+        </tr>
+        <tr>
+          <td>Comunicación</td>
+          <td>Voz, postura, cola</td>
+          <td>El ronroneo no siempre implica felicidad</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr />
+
+  <!-- 5.PROMPTING PARA IMÁGENES-->
+  <section>
+    <h2>5. Prompting para imágenes</h2>
+
+    <h3>5.1 Prompt de ejemplo (para una IA de imágenes)</h3>
+    <p>
+      <strong>Prompt:</strong> “Fotografía hiperrealista de un gato doméstico de pelo corto, sentado en el alféizar de una ventana, de espaldas a la cámara mientras mira hacia afuera. Luz natural suave entrando por la ventana, fondo ligeramente desenfocado para resaltar la silueta del gato. Colores cálidos y ambiente tranquilo.”
+    </p>
+
+    <h3>5.2 Inserción de la imagen en HTML</h3>
+    <img
+      src="../images/gato.png"
+      alt="Foto de un gato sentado en la ventana"
+      width="640"
+    />
+
+    <h3>5.3 ¿Por qué el atributo <code>alt</code> es esencial en accesibilidad?</h3>
+    <p>El texto alternativo describe la imagen para personas que no pueden verla, como usuarias de lectores de pantalla o quien tenga una conexión lenta. Además, el atributo <code>alt</code> ofrece un contenido equivalente cuando la imagen no se carga. Debe ser breve, preciso y centrado en la función de la imagen en el contexto.</p>
+  </section>
+</body>
+</html>
