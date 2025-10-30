@@ -1,0 +1,11 @@
+body {
+    font-size: 20pt;
+}
+
+.pequeno {
+    font-size: 0,8em;
+}
+
+.grande {
+    font-size: 8em;
+}
