@@ -1,0 +1,111 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+
+
+
+header {
+  background-color: #84250C;
+  color: #ffffff;
+}
+
+header h1 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+
+nav {
+  background-color: #84250C;
+}
+
+nav ul {
+  list-style: none;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+nav li {
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+
+
+main {
+  max-width: 960px;
+  margin: 20px auto 40px;
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 20px;
+}
+
+
+#bienvenida {
+  flex: 0 0 100%;
+}
+
+#bienvenida h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+#bienvenida p {
+  line-height: 1.4;
+}
+
+
+#formativa {
+  flex: 1;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 50px;
+  width: 500px;
+  height: 350px;
+}
+
+#novedades {
+    flex: 1;
+    padding: 50px;
+
+}
+
+#formativa h2, #novedades h2 {
+  margin-bottom: 10px;
+}
+
+#formativa p {
+  margin-bottom: 10px;
+}
+
+
+#formativa ul, #novedades ul {
+  margin-left: 20px;
+}
+
+#formativa li, #novedades li {
+  margin-bottom: 6px;
+}
+
+
+footer {
+  background-color: #84250C;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
