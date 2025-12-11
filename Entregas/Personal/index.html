@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Diego Petkov">
+  <meta name="description" content="Clases de APW 2do curso - SMR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style/index.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Aprendiendo HTML5</title>
+</head>
+
+<body>
+  <header>
+    <h1>Jets Privados</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" title="Ir a la página de inicio">Inicio</a></li>
+        <li><a href="about.html" title="Conoce quiénes somos">About</a></li>
+        <li><a href="datos.html" title="Ver datos, tabla y tarifas">Datos</a></li>
+        <li><a href="contacto.html" title="Ir al formulario de contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="intro">Bienvenido</h2>
+
+      <article>
+        <h3>¿Qué es un jet privado?</h3>
+        <p>
+          Un jet privado es un avion destinado a transporte ejecutivo o particular.
+          Si quieres, puedes leer las <a href="#faq" title="Ir a preguntas frecuentes">preguntas frecuentes</a>.
+        </p>
+
+        <figure>
+          <img src="../../images/avion.jpg" alt="Jet privado en pista" width="420">
+          <figcaption>Jet privado en pista (imagen de ejemplo).</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>Galería</h3>
+        <p>Algunas imágenes relacionadas:</p>
+        <img src="../../images/avion1.jpg" alt="Jet privado en hangar" width="260">
+        <img src="../../images/avion2.jpg" alt="Jet privado estacionado" width="260">
+        <img src="../../images/avion3.jpg" alt="Jet privado en vuelo" width="260">
+      </article>
+    </section>
+
+    <aside>
+      <h2>Enlaces</h2>
+      <p>
+        Enlace externo:
+        <a href="https://www.flightradar24.com/" target="_blank"
+           title="Abrir FlightRadar24 en una pestaña nueva">
+          FlightRadar24
+        </a>
+      </p>
+      <p>
+        Enlace interno:
+        <a href="datos.html#tabla" title="Ir a la tabla de datos en la página Datos">Tabla de datos</a>
+      </p>
+      <p>
+        Volver arriba:
+        <a href="#intro" title="Volver al inicio de esta página">Inicio</a>
+      </p>
+    </aside>
+
+    <section>
+      <h2 id="tabla">Tabla</h2>
+
+      <article>
+        <h3>Comparativa básica</h3>
+
+        <table>
+          <caption>Ejemplo de tabla con estructura completa</caption>
+          <thead>
+            <tr>
+              <th scope="col">Modelo</th>
+              <th scope="col">Velocidad</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gulfstream G650</td>
+              <td>956 km/h</td>
+              <td>65M $</td>
+            </tr>
+            <tr>
+              <td>Global 7500</td>
+              <td>982 km/h</td>
+              <td>73M $</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Precios orientativos para fines educativos.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+    </section>
+
+    <section>
+      <h2 id="faq">FAQ</h2>
+
+      <article>
+        <h3>¿Se necesita licencia para tener un jet privado?</h3>
+        <p>No necesariamente. Se puede contratar una tripulación profesional.</p>
+      </article>
+
+      <article>
+        <h3>¿Un jet privado siempre es más rápido?</h3>
+        <p>Depende de la ruta, escalas y disponibilidad, pero suele ahorrar tiempo en procesos.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jets Privados | Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
