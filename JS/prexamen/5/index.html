@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> Ejercicios por examen</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h2>Validad edad y mostrar acceso</h2>
+        <label >Edad:
+        <input type="number" id="edad">
+        </label>
+        <button id="validar">Validar</button>
+        <p id="resultado"></p>
+
+        <script>
+            var validarbtn = document.getElementById("validar");
+            var edad = document.getElementById("edad");
+            var resultado = document.getElementById("resultado");
+
+            validarbtn.addEventListener("click", function(){
+                resultado.classList.remove("error", "menor", "mayor");
+
+                var valoredad = parseInt(edad.value);
+
+                if (isNaN(valoredad) || valoredad < 0) {
+                    resultado.textContent = "Por favor, ingresa una edad válida";
+                    resultado.classList.add("error");
+                } else if (valoredad < 18) {
+                    resultado.textContent = "No tienes acceso.";
+                    resultado.classList.add("error");
+                } else {
+                    resultado.textContent = "Acceso permitido.";
+                    resultado.classList.add("mayor");
+                }
+            });
+
+        </script>
+    
+    </body>
+
+
+
+</html>
+

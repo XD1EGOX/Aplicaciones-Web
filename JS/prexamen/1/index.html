@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> Ejercicios por examen</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h2>Validad campo texto</h2>
+        <p id="mensaje"></p>
+        <label>Nombre:
+        <input type="text" id="nombre">
+        </label>
+        <button id="btnComprobar">Comprobar</button>
+        <script>
+            var nombre = document.getElementById("nombre");
+            var btnComprobar = document.getElementById("btnComprobar");
+            var mensaje = document.getElementById("mensaje");
+
+            btnComprobar.addEventListener("click", function() {
+                mensaje.classList.remove("novalido", "valido");
+                var texto = nombre.value.trim();
+                if (texto.length < 3) {
+                    mensaje.textContent = "El campo no es válido";
+                    mensaje.classList.add("novalido");
+                } else {
+                    mensaje.textContent = "El campo es válido";
+                    mensaje.classList.add("valido");
+                }
+            });
+
+        </script>
+    </body>
+
+
+
+</html>
+

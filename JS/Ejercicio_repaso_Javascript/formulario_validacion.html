@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario validación</title>
+    </head>
+    <body>
+
+        <h2>Formulario de Registro</h2>
+
+        <form id="formRegistro">
+
+            <label>
+                Nombre:
+                <input type="text" id="nombre">
+            </label>
+            <br><br>
+
+            <label>
+                Edad:
+                <input type="number" id="edad">
+            </label>
+            <br><br>
+
+            <label>
+                Email:
+                <input type="text" id="email">
+            </label>
+            <br><br>
+
+            <label>
+                Contraseña:
+                <input type="password" id="password">
+            </label>
+            <br><br>
+
+            <label>
+                Repetir contraseña:
+                <input type="password" id="repetirPassword">
+            </label>
+            <br><br>
+
+            <button type="button" onclick="validarFormulario()">
+                Validar
+            </button>
+
+        </form>
+
+        <br>
+        <div id="mensajes"></div>
+
+        <script>
+
+            function validarNombre(nombre) {
+                if (nombre === "") {
+                    return false;
+                }
+
+                if (nombre.length < 3) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validarEdad(edad) {
+                if (edad === "") {
+                    return false;
+                }
+
+                if (isNaN(edad)) {
+                    return false;
+                }
+
+                if (edad < 18) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validarEmail(email) {
+                if (email.indexOf("@") === -1) {
+                    return false;
+                }
+
+                if (email.indexOf(".") === -1) {
+                    return false;
+                }
+
+                if (email.indexOf("@") > email.lastIndexOf(".")) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validarPassword(password) {
+                if (password.length < 6) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validarPasswordRepetida(password, repetirPassword) {
+                if (password !== repetirPassword) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validarFormulario() {
+
+                var nombre = document.getElementById("nombre").value;
+                var edad = document.getElementById("edad").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var repetirPassword = document.getElementById("repetirPassword").value;
+
+                var errores = [];
+
+                if (!validarNombre(nombre)) {
+                    errores.push("El nombre debe tener al menos 3 caracteres.");
+                }
+
+                if (!validarEdad(edad)) {
+                    errores.push("La edad debe ser un número mayor o igual a 18.");
+                }
+
+                if (!validarEmail(email)) {
+                    errores.push("El email no es válido.");
+                }
+
+                if (!validarPassword(password)) {
+                    errores.push("La contraseña debe tener al menos 6 caracteres.");
+                }
+
+                if (!validarPasswordRepetida(password, repetirPassword)) {
+                    errores.push("Las contraseñas no coinciden.");
+                }
+
+                var mensajesDiv = document.getElementById("mensajes");
+
+                if (errores.length === 0) {
+                    mensajesDiv.innerHTML = "<p style='color:green;'>Formulario válido. Registro correcto</p>";
+                } else {
+                    var texto = "<p style='color:red;'>Formulario NO válido</p>";
+                    texto += "<ul>";
+
+                    for (var i = 0; i < errores.length; i++) {
+                        texto += "<li>" + errores[i] + "</li>";
+                    }
+
+                    texto += "</ul>";
+                    mensajesDiv.innerHTML = texto;
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
